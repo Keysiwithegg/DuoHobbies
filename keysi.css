@@ -1,4 +1,7 @@
 /* Style the header with a grey background and some padding */
+body{
+    background-image:url(./keysi_assets/bg.png);
+}
 .header {
     overflow: hidden;
     background-color: salmon;
@@ -50,4 +53,7 @@
     .header-right {
       float: none;
     }
+  }
+  .frontpic{
+    width: 10%;
   }
