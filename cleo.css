@@ -91,15 +91,23 @@ p {
 
 .slider {
   display: flex;
-  aspect-ratio: 16/9;
+  aspect-ratio: 17/10;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
   border-radius: 0.5rem;
+  position: relative;
+}
+  
+.slider-item {
+  position: relative;
+  display: flex;
+  text-align: center;
+  aspect-ratio: 16/9;
 }
 
-.slider img {
+.slider-item img {
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: cover;
@@ -132,6 +140,40 @@ p {
 .slider-nav a:hover {
   background-color: rgb(99, 97, 97);
 }
+
+.caption{
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  background: rgba(128, 128, 128, 0.6);
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 30%;
+  padding-top: 10%;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.caption:hover{
+  opacity: 1;
+}
+
+
+.caption h2 {
+  justify-content: center;
+  margin: 0;
+  font-size: 3rem;
+  margin-bottom: 3%;
+  top: 5%;
+}
+
+.caption p {
+  justify-content: center;
+  padding-left: 9%;
+  margin: 0;
+  font-size: 2rem;
+  margin-right: 13%;
+}
+
 
 /* Video Slider Styles */
 .vid-container {
@@ -256,7 +298,29 @@ footer {
 
 /* Mobile Responsive */
 @media only screen and (max-width: 891px) {
-  header {
+
+.slider{
+  aspect-ratio: 16/10;
+}
+}
+
+@media only screen and (max-width: 759px) {
+  
+.slider{
+  aspect-ratio: 16/10;
+}
+
+.caption h2{
+  font-size: 2rem;
+}
+.caption p{
+  font-size: 1.5rem;
+  padding-left: 10%;
+}
+}
+
+@media only screen and (max-width: 581px) {
+    header {
     font-size: 18px;
     padding: 10px;
   }
@@ -297,5 +361,37 @@ footer {
   margin: 0.4rem;
 }
 
+.slider{
+  aspect-ratio: 16/10;
+}
 
+.caption h2{
+  font-size: 2rem;
+  padding-right: 5%;
+}
+.caption p{
+  font-size: 1.2rem;
+  padding-right: 5%;
+}
+ .caption{
+    padding-top: 2%;
+  }
+}
+
+@media only screen and (max-width: 427px){
+  h2{
+    font-size: 2rem;
+  }
+  p{
+    font-size: 1rem;
+  }
+  .caption h2{
+    font-size: 1.5rem;
+  }
+  .caption p{
+    font-size: .8rem;
+  }
+  .caption{
+    padding-top: 2%;
+  }
 }
