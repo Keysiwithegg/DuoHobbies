@@ -741,7 +741,6 @@ body.dark-theme{
 .projects__card{
   padding: 1rem 1rem 2rem;
   transition: background-color .4s;
-  background-color: var(--white-color);
 }
 
 .projects__image{
@@ -800,9 +799,18 @@ body.dark-theme{
   font-weight: var(--font-medium);
   transition: color .4s;
 }
+.projects__link i{
+  font-size: 1rem;
+  color: var(--title-color);
+  transition: color .4s;
+}
 
 .projects__link:hover,
-.projects__link i{
+.projects__link:hover i{
+  color: var(--first-color);
+}
+
+.projects__card:hover{
   background-color: var(--white-color);
 }
 /*=============== CONTACT ===============*/
